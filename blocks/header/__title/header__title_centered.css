@@ -1,0 +1,16 @@
+.header__title_centered {
+    padding-left: 90px;
+}
+
+.header__title_centered:nth-of-type(2n) {
+    padding-left: 34px;
+}
+
+@media screen and (max-width:768px) {
+    .header__title_centered {
+        padding-left: 56px;
+    }
+    .header__title_centered:nth-of-type(2n) {
+        padding-left: 26px;
+    }
+}

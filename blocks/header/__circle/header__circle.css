@@ -1,0 +1,28 @@
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.header__circle {
+    position: absolute;
+    top: -102px;
+    right: -25px;
+    animation: 30s linear infinite rotate;
+    width: 780px;
+    height: 780px;
+}
+
+@media screen and (max-width:768px) {
+  .header__circle {
+    width: 375px;
+    height: 375px;
+    bottom: 41px;
+    top: auto;
+    left: 0;
+  }
+}

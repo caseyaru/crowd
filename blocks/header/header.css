@@ -1,0 +1,14 @@
+.header {
+    background-position: center;
+    min-height: 700px;
+    position: relative;
+    background-blend-mode: color-burn;
+    background-color: rgba(233, 222, 212, 1);
+    overflow: hidden;
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        min-height: 812px;
+    }
+}

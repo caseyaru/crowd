@@ -1,0 +1,11 @@
+.header__chess_big {
+    right: 334px;
+    bottom: 0;
+}
+
+@media screen and (max-width:768px) {
+    .header__chess_big {
+        width: 130px;
+        right: 30%;
+    }
+}
