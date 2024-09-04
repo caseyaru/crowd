@@ -1,0 +1,6 @@
+.header__text-block {
+    position: relative;
+    z-index: 5;
+    margin-left: 72px;
+    max-width: 542px;
+}

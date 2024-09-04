@@ -1,0 +1,5 @@
+.header__head {
+    display: flex;
+    flex-direction: row;
+    padding: 26px 72px 62px;
+}

@@ -1,0 +1,9 @@
+.header__title_centered {
+    /* text-align: center;
+    display: inline-block; */
+    padding-left: 90px;
+}
+
+.header__title_centered:nth-of-type(2n) {
+    padding-left: 34px;
+}
