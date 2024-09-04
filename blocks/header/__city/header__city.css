@@ -14,8 +14,27 @@
     height: 100%;
 }
 
-/* @media screen and (max-width:768px) {
+@media screen and (min-width:1440px) {
     .header__city {
-        right: 50%
+        top: auto;
     }
-} */
+}
+
+@media screen and (max-width:600px) {
+    .header__city {
+        right: 0;
+        left: 0;
+        top: auto;
+        height: 300px;
+    }
+    .header__city img {
+        width: auto;
+        transform: translateX(-20%);
+    }
+}
+
+@media screen and (max-width:400px) {
+    .header__city img {
+        transform: translateX(-47%);
+    }
+}

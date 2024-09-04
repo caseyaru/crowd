@@ -2,3 +2,9 @@
     right: 41px;
     bottom: 20px;
 }
+
+@media screen and (max-width:768px) {
+    .header__chess_little {
+        display: none;
+    }
+}

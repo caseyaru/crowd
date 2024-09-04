@@ -7,3 +7,11 @@
     margin: 20px 0 40px;
     padding: 0;
 }
+
+@media screen and (max-width:768px) {
+    .header__text {
+        text-align: left;
+        font-size: 18px;
+        margin: 24px 0 32px;
+    }
+}

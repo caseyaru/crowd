@@ -43,3 +43,13 @@
     color: rgba(255, 255, 255, 1);
     border: 2px solid rgba(31, 31, 31, 1);
 }
+
+@media screen and (max-width:768px) {
+    .header__buttons {
+        flex-direction: column;
+    }
+    .header__buttons button {
+        height: 47px;
+        padding: 10px 34px;
+    }
+}
