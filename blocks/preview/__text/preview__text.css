@@ -10,6 +10,12 @@
   padding: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .preview__text {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .preview__text {
     font-size: 28px;

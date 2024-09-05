@@ -1,0 +1,20 @@
+.table__info {
+    max-width: 704px;
+    padding-top: 37px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    .table__info {
+        max-width: 100%;
+        padding-top: 0;
+        margin-top: -10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .table__info {
+        padding: 0 20px;
+    }
+}
