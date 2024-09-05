@@ -1,0 +1,29 @@
+.line__item {
+  transition: all 0.1s ease-in-out;
+  counter-increment: item;
+  font-family: "Merriweather", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24.2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+}
+
+.line__item::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 1);
+  margin-left: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .line__item {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+}

@@ -1,0 +1,19 @@
+.line {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    background-color: rgba(245, 73, 50, 1);
+    padding: 18px 0;
+    gap: 12px;
+}
+
+.line:hover .line__marquee {
+    animation-play-state: paused;
+}
+
+@media screen and (max-width:768px) {
+    .line {
+        padding: 12px 0;
+    }
+}

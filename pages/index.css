@@ -14,3 +14,10 @@
 @import url(../blocks/header/__title/header__title_centered.css);
 @import url(../blocks/header/__text/header__text.css);
 @import url(../blocks/header/__buttons/header__buttons.css);
+@import url(../blocks/line/line.css);
+@import url(../blocks/line/__marquee/line__marquee.css);
+@import url(../blocks/line/__item/line__item.css);
+@import url(../blocks/preview/preview.css);
+@import url(../blocks/preview/__text/preview__text.css);
+@import url(../blocks/preview/__text/preview__text_special.css);
+@import url(../blocks/preview/__image/preview__image.css);
