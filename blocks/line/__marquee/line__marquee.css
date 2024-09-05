@@ -1,0 +1,18 @@
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+.line__marquee {
+  flex-shrink: 0;
+  display: flex;
+  gap: 12px;
+  counter-reset: item;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: scroll 20s linear infinite;
+}
