@@ -1,0 +1,41 @@
+.table__parameter-text {
+  font-family: "Golos Text", serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  width: 50%;
+  padding: 16px 0;
+  padding-left: 16px;
+  border-bottom: 2px solid rgba(208, 208, 208, 1);
+}
+
+.table__parameter-text_special {
+  position: relative;
+}
+
+.table__parameter-text_special::after {
+  position: absolute;
+  display: inline-block;
+  bottom: 40%;
+  left: 0;
+  content: "";
+  width: 81px;
+  background-color: rgba(245, 73, 50, 1);
+  height: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+  .table__parameter-text {
+    width: 100%;
+    border: none;
+    padding: 12px 0 16px;
+  }
+}
+
+@media (max-width: 360px) {
+    .table__parameter-text {
+        font-size: 16px;
+        line-height: 21.6px;
+        word-break: break-all;
+    }
+}
