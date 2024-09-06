@@ -21,10 +21,6 @@
   </head>
   <body class="page">
     <header class="header">
-      <!-- <img src="./images/headerCity.png" alt="Изображение города" class="header__city"> -->
-      <div class="header__city">
-        <img src="./images/headerCity.png" alt="Изображение города" />
-      </div>
       <img
         src="./images/headerCircleWithText.png"
         alt="Вращающийся круг с текстом внутри"
@@ -35,7 +31,6 @@
         alt="Текстура фона"
         class="header__texture"
       />
-
       <img
         src="./images/chessLittle.svg"
         alt="Текстура фона"
@@ -46,13 +41,11 @@
         alt="Текстура фона"
         class="header__chess header__chess_big"
       />
-
       <div class="header__head">
         <a href="/" class="header__logo">
           <img src="./images/logo.svg" alt="Логотип турнира" />
         </a>
       </div>
-
       <div class="header__main">
         <div class="header__text-block">
           <h1 class="header__title">
@@ -65,14 +58,17 @@
             васюкинского турнира по шахматам
           </p>
           <div class="header__buttons">
-            <button class="page__button-primary">
+            <a href="#" class="page__button-primary">
               Поддержать шахматную мысль
-            </button>
-            <button class="page__button-secondary">
+            </a>
+            <a href="#" class="page__button-secondary">
               Подробнее о&nbsp;турнире
-            </button>
+            </a>
           </div>
         </div>
+      </div>
+      <div class="header__city">
+        <img src="./images/headerCity.png" alt="Изображение города" />
       </div>
     </header>
 
@@ -260,7 +256,11 @@
    
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p class="footer__text">
+        Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+      </p>
+    </footer>
 
     <script src="./pages/index.js"></script>
   </body>

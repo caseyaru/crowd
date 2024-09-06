@@ -44,3 +44,5 @@
 @import url(../blocks/grid/__pagination/grid__pagination.css);
 @import url(../blocks/grid/__slider-button/grid__slider-button.css);
 @import url(../blocks/grid/__slider-button/grid__slider-button_disabled.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__text/footer__text.css);
