@@ -1,0 +1,9 @@
+.grid__slider-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(49, 49, 49, 1);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
