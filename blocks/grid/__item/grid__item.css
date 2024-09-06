@@ -1,0 +1,6 @@
+.grid__item {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+

@@ -1,0 +1,21 @@
+.grid__image {
+  position: absolute;
+  bottom: 0;
+  object-fit: contain;
+  right: -68px;
+}
+
+@media screen and (max-width: 1300px) {
+  .grid__image {
+    right: 0;
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .grid__image {
+    left: 20px;
+    width: 90%;
+    top: 205px;
+  }
+}

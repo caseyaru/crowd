@@ -1,0 +1,25 @@
+.grid__text {
+  font-family: "Golos Text", serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  max-width: 302px;
+}
+
+.grid__slide_number_five .grid__text {
+  max-width: 250px;
+}
+
+.grid__slide_number_seven .grid__text {
+  max-width: 446px;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid__text {
+    max-width: 100% !important;
+    font-size: 17px;
+    line-height: 21.6px;
+  }
+}

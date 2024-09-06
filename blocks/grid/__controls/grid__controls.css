@@ -1,0 +1,14 @@
+.grid__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+    gap: 16px;
+}
+
+@media screen and (min-width:1025px) {
+    .grid__controls {
+        display: none;
+    }
+}
