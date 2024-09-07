@@ -1,0 +1,32 @@
+/* .cards__slider {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+} */
+
+.cards__wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .cards__list {
+    overflow: hidden; /* Ограничиваем видимую область только для слайдов */
+    position: relative;
+  }
+  
+  .cards__slider {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .cards__item {
+    flex-shrink: 0;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  

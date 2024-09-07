@@ -1,0 +1,17 @@
+.block__slider-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(49, 49, 49, 1);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.block__slider-button:hover {
+  background-color: rgba(251, 206, 81, 1);
+}
