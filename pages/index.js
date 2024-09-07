@@ -1,3 +1,75 @@
+// переменные
+
+const MOBILE = 768;
+const LAPTOP = 1024;
+const DESKTOP = 1200;
+const slidesForMobile = 1;
+const slidesForLaptop = 2;
+const slidesForDesktop = 3;
+
+const lineBlock = document.querySelector(".line");
+const cardsBlock = document.querySelector(".cards");
+
+const textElement = document.querySelector("#previewMainText");
+const startText = textElement.innerHTML;
+const imageElement = document.querySelector(".preview__image");
+const firstPart = "Чтобы поддержать Международный васюкинский турнир";
+const secondPart = `
+            посетите лекцию на тему: 
+          <span class="preview__text_special">«Плодотворная дебютная идея»</span>
+          `;
+
+const buttonPrevGrid = document.querySelector("#buttonPrevGrid");
+const buttonNextGrid = document.querySelector("#buttonNextGrid");
+
+const blocksForGrid = document.querySelectorAll(".grid__slide");
+const slides = [
+  [0, 1], // блоки 1 и 2 (для первого слайда)
+  [2], // блок 3 (для второго слайда)
+  [3, 4], // блоки 4 и 5 (для третьего слайда)
+  [5], // блок 6 (для четвертого слайда)
+  [6], // блок 7 (для пятого слайда)
+];
+let currentSlideGrid = 0;
+
+const paginationDots = document.querySelectorAll(".grid__pagination-dot");
+
+// в дальнейшем сюда можно добавить вывод разных href ссылок, картинок, ролей
+// в дизайне меняется только имя, его и оставим
+const persons = [
+  {
+    name: 'Хозе-Рауль Капабланка',
+  },
+  {
+    name: 'Эммануил Ласкер',
+  },
+  {
+    name: 'Александр Алехин',
+  },
+  {
+    name: 'Арон Нимцович',
+  },
+  {
+    name: 'Рихард Рети',
+  },
+  {
+    name: 'Остап Бендер',
+  }
+];
+
+const sliderCards = document.querySelector('.cards__slider');
+
+let allCards;
+const buttonPrevCards = document.getElementById('buttonPrevCards');
+const buttonNextCards = document.getElementById('buttonNextCards');
+const currentCardNumber = document.getElementById('currentCardNumber');
+const allCardsLength = document.getElementById('allCardsLength');
+
+let currentIndex = 0;
+let slidesToShow = 3;
+let slideWidth = sliderCards.offsetWidth / slidesToShow;
+let autoSlideInterval;
+
 // бегущая строка
 
 const initLine = (line) => {
@@ -5,9 +77,6 @@ const initLine = (line) => {
   const clone = marquee.cloneNode(true);
   marquee.parentElement.appendChild(clone);
 };
-
-const lineBlock = document.querySelector(".line");
-const cardsBlock = document.querySelector(".cards");
 
 if (lineBlock && cardsBlock) {
   const clonedLine = lineBlock.cloneNode(true);
@@ -20,15 +89,6 @@ if (lineBlock && cardsBlock) {
 }
 
 // разрыв текста
-
-const textElement = document.querySelector("#previewMainText");
-const startText = textElement.innerHTML;
-const imageElement = document.querySelector(".preview__image");
-const firstPart = "Чтобы поддержать Международный васюкинский турнир";
-const secondPart = `
-            посетите лекцию на тему: 
-          <span class="preview__text_special">«Плодотворная дебютная идея»</span>
-          `;
 
 const addMobileText = () => {
   if (!document.querySelector(".preview__text_second")) {
@@ -49,19 +109,12 @@ const addDesktopText = () => {
 };
 
 const changeTexts = () => {
-  if (window.innerWidth < 1024) {
+  if (window.innerWidth < LAPTOP) {
     addMobileText();
   } else {
     addDesktopText();
   }
 };
-changeTexts();
-
-window.addEventListener("resize", () => {
-  changeTexts();
-  checkSliderGrid();
-  updateButtons();
-});
 
 // сетка
 
@@ -74,19 +127,6 @@ const setSlideNext = (currentSlide) => {
   currentSlide = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
   return currentSlide;
 };
-
-const buttonPrevGrid = document.querySelector("#buttonPrevGrid");
-const buttonNextGrid = document.querySelector("#buttonNextGrid");
-
-const blocksForGrid = document.querySelectorAll(".grid__slide");
-const slides = [
-  [0, 1], // Блоки 1 и 2 (для первого слайда)
-  [2], // Блок 3 (для второго слайда)
-  [3, 4], // Блоки 4 и 5 (для третьего слайда)
-  [5], // Блок 6 (для четвертого слайда)
-  [6], // Блок 7 (для пятого слайда)
-];
-let currentSlideGrid = 0;
 
 function mergeBlocksContent(blockIndexes) {
   const slideContainer = blocksForGrid[blockIndexes[0]].cloneNode(true);
@@ -105,8 +145,6 @@ function showSlideGrid(index) {
   const slideContent = mergeBlocksContent(slides[index]);
   slider.appendChild(slideContent);
 }
-
-const paginationDots = document.querySelectorAll(".grid__pagination-dot");
 
 function updatePagination() {
   paginationDots.forEach((dot, index) => {
@@ -158,14 +196,8 @@ paginationDots.forEach((dot, index) => {
   });
 });
 
-if (window.innerWidth <= 1024) {
-  showSlideGrid(currentSlideGrid);
-  updateButtons();
-  updatePagination();
-}
-
 const checkSliderGrid = () => {
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > LAPTOP) {
     const slider = document.querySelector(".grid__slider");
     slider.innerHTML = "";
     blocksForGrid.forEach((block) => slider.appendChild(block));
@@ -177,35 +209,8 @@ const checkSliderGrid = () => {
   }
 };
 
-// слайдер с карточками
-
-// в дальнейшем сюда можно добавить вывод разных href ссылок, картинок, ролей
-// в дизайне меняется только имя, его и оставим
-
-const persons = [
-  {
-    name: 'Хозе-Рауль Капабланка',
-  },
-  {
-    name: 'Эммануил Ласкер',
-  },
-  {
-    name: 'Александр Алехин',
-  },
-  {
-    name: 'Арон Нимцович',
-  },
-  {
-    name: 'Рихард Рети',
-  },
-  {
-    name: 'Остап Бендер',
-  }
-];
-
-const sliderCards = document.querySelector('.cards__slider');
-
 // отрисовка человечков
+
 const createCards = (persons) => {
   const originalCard = document.querySelector('.cards__item');
   persons.forEach((person) => {
@@ -215,30 +220,22 @@ const createCards = (persons) => {
     sliderCards.appendChild(newCard);
   });
   originalCard.remove();
+  allCards = document.querySelectorAll('.cards__item');
+  setCardsToShow();
+  updateSliderCards();
 }
-createCards(persons);
 
-//=========
-const allCards = document.querySelectorAll('.cards__item');
-const prevButton = document.getElementById('buttonPrevCards');
-const nextButton = document.getElementById('buttonNextCards');
-const currentCardNumber = document.getElementById('currentCardNumber');
-const allCardsLength = document.getElementById('allCardsLength');
+// слайдер с карточками
 
-let currentIndex = 0;
-let slidesToShow = 3;
-let slideWidth = sliderCards.offsetWidth / slidesToShow;
-let autoSlideInterval;
-
-function setSlidesToShow() {
+function setCardsToShow() {
   const windowWidth = window.innerWidth;
   
-  if (windowWidth > 1200) {
-    slidesToShow = 3;
-  } else if (windowWidth > 768) {
-    slidesToShow = 2;
+  if (windowWidth > DESKTOP) {
+    slidesToShow = slidesForDesktop;
+  } else if (windowWidth > MOBILE) {
+    slidesToShow = slidesForLaptop;
   } else {
-    slidesToShow = 1;
+    slidesToShow = slidesForMobile;
   }
   
   slideWidth = sliderCards.offsetWidth / slidesToShow;
@@ -247,59 +244,67 @@ function setSlidesToShow() {
     card.style.minWidth = `${100 / slidesToShow}%`;
   });
   
-  updateSlider();
+  updateSliderCards();
 }
 
-function updateSlider() {
+function updateSliderCards() {
   const totalCards = allCards.length;
   const translateX = -(currentIndex * slideWidth);
-  
   sliderCards.style.transform = `translateX(${translateX}px)`;
-  
   const lastVisibleCardIndex = Math.min(currentIndex + slidesToShow, totalCards);
   currentCardNumber.textContent = lastVisibleCardIndex;
   allCardsLength.textContent = totalCards;
 }
 
-function nextSlide() {
+function setNextCards() {
   const totalSlides = allCards.length;
   currentIndex = (currentIndex + slidesToShow) % totalSlides;
-  
   if (currentIndex >= totalSlides) {
     currentIndex = 0;
   }
-  
-  updateSlider();
+  updateSliderCards();
 }
 
-function prevSlide() {
+function setPrevCards() {
   const totalSlides = allCards.length;
   currentIndex = (currentIndex - slidesToShow + totalSlides) % totalSlides;
-  
-  updateSlider();
+  updateSliderCards();
 }
 
 function startAutoSlide() {
-  autoSlideInterval = setInterval(nextSlide, 4000);
+  autoSlideInterval = setInterval(setNextCards, 4000);
 }
 
 function stopAutoSlide() {
   clearInterval(autoSlideInterval);
 }
 
-nextButton.addEventListener('click', () => {
+buttonPrevCards.addEventListener('click', () => {
   stopAutoSlide();
-  nextSlide();
+  setPrevCards();
   startAutoSlide();
 });
 
-prevButton.addEventListener('click', () => {
+buttonNextCards.addEventListener('click', () => {
   stopAutoSlide();
-  prevSlide();
+  setNextCards();
   startAutoSlide();
 });
 
-window.addEventListener('resize', setSlidesToShow);
-
-setSlidesToShow();
+changeTexts();
+createCards(persons);
+setCardsToShow();
 startAutoSlide();
+
+if (window.innerWidth <= LAPTOP) {
+  showSlideGrid(currentSlideGrid);
+  updateButtons();
+  updatePagination();
+}
+
+window.addEventListener("resize", () => {
+  changeTexts();
+  checkSliderGrid();
+  updateButtons();
+  setCardsToShow();
+});
