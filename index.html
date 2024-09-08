@@ -154,7 +154,7 @@
 
       <div class="grid">
 
-        <h2 class="grid__title">
+        <h2 class="block__title grid__title">
           Этапы преображения Васюков
         </h2>
 
@@ -231,10 +231,8 @@
           </li>
         </ul>
         <div class="grid__controls">
-          <button class="grid__slider-button" id="buttonPrevGrid">
-            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.07664 15.923L1.15357 8.9999L8.07664 2.07682" stroke="white" stroke-width="1.63636" stroke-linecap="square"/>
-            </svg>            
+          <button class="block__slider-button" id="buttonPrevGrid">
+            <img src="./images/prev.svg" alt="Назад">   
           </button>
           <div class="grid__pagination">
             <span class="grid__pagination-dot"></span>
@@ -243,15 +241,57 @@
             <span class="grid__pagination-dot"></span>
             <span class="grid__pagination-dot"></span>
           </div>
-          <button class="grid__slider-button" id="buttonNextGrid">
-            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.92336 2.0769L8.84644 8.99998L1.92336 15.9231" stroke="white" stroke-width="1.63636" stroke-linecap="square"/>
-            </svg>              
+          <button class="block__slider-button" id="buttonNextGrid">
+            <img src="./images/next.svg" alt="Вперёд">          
           </button>
         </div>
 
         <img src="./images/plane.png" alt="Самолётик" class="grid__image">
 
+      </div>
+
+      <div class="cards">
+        <h2 class="block__title">
+          Участники турнира
+        </h2>
+
+        <div class="cards__wrapper">
+          <div class="cards__list">
+
+            <ul class="cards__slider">
+              <li class="cards__item">
+                <img src="./images/person.png" alt="Фотография участника турнира" class="cards__photo">
+                <p class="cards__name">
+                </p>
+                <p class="cards__about">
+                  Чемпион мира по шахматам
+                </p>
+                <a href="#" class="cards__link">
+                  Подробнее
+                </a>
+              </li>
+            </ul>
+    
+            
+
+          </div>
+          
+          <div class="cards__controls">
+            <button class="block__slider-button" id="buttonPrevCards">
+              <img src="./images/prev.svg" alt="Назад"> 
+            </button>
+            <div class="cards__page">
+              <span class="cards__page-number" id="currentCardNumber">3</span>
+              <p>/</p>
+              <p id="allCardsLength">6</p>
+            </div>
+            <button class="block__slider-button" id="buttonNextCards">
+              <img src="./images/next.svg" alt="Вперёд"> 
+            </button>
+          </div>
+
+        </div>
+        
       </div>
    
     </main>
