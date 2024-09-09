@@ -2,7 +2,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 60px 0 48px;
+  margin: 56px 0 48px;
   padding: 0;
   width: 100%;
 }
@@ -19,13 +19,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .table__parameters {
-        margin: 44px 0 40px;
-    }
-    .table__parameters li:first-child .table__parameter-text {
-        padding-top: 12px;
-    }
-    .table__parameters li:last-child {
-        border-bottom: none;
-    }
+  .table__parameters {
+    margin: 44px 0 40px;
+  }
+  .table__parameters li:first-child .table__parameter-text {
+    padding-top: 12px;
+  }
+  .table__parameters li:last-child {
+    border-bottom: none;
+  }
 }

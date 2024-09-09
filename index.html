@@ -3,8 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="pages/index.css" />
     <title>Клуб четырех коней</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,28 +30,28 @@
   <body class="page">
     <header class="header">
       <img
-        src="./images/headerCircleWithText.png"
+        src="images/headerCircleWithText.png"
         alt="Вращающийся круг с текстом внутри"
-        class="header__circle"
+        class="rotation header__circle"
       />
       <img
-        src="./images/headerBackground.png"
+        src="images/headerBackground.png"
         alt="Текстура фона"
         class="header__texture"
       />
       <img
-        src="./images/chessLittle.svg"
+        src="images/chessLittle.svg"
         alt="Текстура фона"
-        class="header__chess header__chess_little"
+        class="flying header__chess header__chess_little"
       />
       <img
-        src="./images/chessBig.svg"
+        src="images/chessBig.svg"
         alt="Текстура фона"
-        class="header__chess header__chess_big"
+        class="flying header__chess header__chess_big"
       />
       <div class="header__head">
         <a href="/" class="header__logo">
-          <img src="./images/logo.svg" alt="Логотип турнира" />
+          <img src="images/logo.svg" alt="Логотип турнира" />
         </a>
       </div>
       <div class="header__main">
@@ -54,27 +62,27 @@
             <span class="header__title_centered">земного шара</span>
           </h1>
           <p class="header__text">
-            Оплатите взнос на телеграммы для организации Международного
+            Оплатите взнос на телеграммы для&nbsp;организации Международного
             васюкинского турнира по шахматам
           </p>
           <div class="header__buttons">
-            <a href="#" class="page__button-primary">
+            <a href="#support" class="page__button-primary">
               Поддержать шахматную мысль
             </a>
-            <a href="#" class="page__button-secondary">
+            <a href="#about" class="page__button-secondary">
               Подробнее о&nbsp;турнире
             </a>
           </div>
         </div>
       </div>
       <div class="header__city">
-        <img src="./images/headerCity.png" alt="Изображение города" />
+        <img src="images/headerCity.png" alt="Изображение города" />
       </div>
     </header>
 
     <main class="main">
       <div class="line">
-        <div class="line__marquee">
+        <div class="scroll line__marquee">
           <div class="line__item">
             Дело помощи утопающим — дело рук самих утопающих!
           </div>
@@ -87,59 +95,56 @@
         </div>
       </div>
 
-      <div class="preview">
+      <div class="preview" id="support">
         <p class="preview__text" id="previewMainText">
-          Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: 
-          <span class="preview__text_special">«Плодотворная дебютная идея»</span>
+          Чтобы поддержать Международный васюкинский турнир посетите лекцию на
+          тему:
+          <span class="preview__text_special"
+            >«Плодотворная дебютная идея»</span
+          >
         </p>
-        <img src="./images/preview.png" alt="Фотография шахматистов" class="preview__image">
+        <img
+          src="images/preview.png"
+          alt="Фотография шахматистов"
+          class="preview__image"
+        />
       </div>
-      
-      <div class="table">
+
+      <div class="table" id="about">
         <div class="table__image">
-          <img src="./images/tableImage.png" alt="">
+          <img src="images/tableImage.png" alt="" />
         </div>
         <div class="table__info">
           <p class="preview__text">
-            и Сеанс <span class="preview__text_special"> одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span> гроссмейстера О.&nbsp;Бендера
+            и Сеанс
+            <span class="preview__text_special">
+              одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span
+            >
+            гроссмейстера О.&nbsp;Бендера
           </p>
           <ul class="table__parameters">
             <li class="table__parameter">
-              <div class="table__parameter-title">
-                Место проведения:
-              </div>
-              <div class="table__parameter-text">
-                Клуб «Картонажник»
-              </div>
+              <div class="table__parameter-title">Место проведения:</div>
+              <div class="table__parameter-text">Клуб «Картонажник»</div>
             </li>
             <li class="table__parameter">
               <div class="table__parameter-title">
                 Дата и время мероприятия:
               </div>
-              <div class="table__parameter-text">
-                22 июня 1927 г. в 18:00
-              </div>
+              <div class="table__parameter-text">22 июня 1927 г. в 18:00</div>
             </li>
             <li class="table__parameter">
               <div class="table__parameter-title">
                 Стоимость входных билетов:
               </div>
-              <div class="table__parameter-text">
-                20 коп.
-              </div>
+              <div class="table__parameter-text">20 коп.</div>
             </li>
             <li class="table__parameter">
-              <div class="table__parameter-title">
-                Плата за игру:
-              </div>
-              <div class="table__parameter-text">
-                50 коп.
-              </div>
+              <div class="table__parameter-title">Плата за игру:</div>
+              <div class="table__parameter-text">50 коп.</div>
             </li>
             <li class="table__parameter">
-              <div class="table__parameter-title">
-                Взнос на телеграммы:
-              </div>
+              <div class="table__parameter-title">Взнос на телеграммы:</div>
               <div class="table__parameter-text">
                 <span class="table__parameter-text_special">100 руб.</span>
                 21 руб. 16 коп.
@@ -147,23 +152,18 @@
             </li>
           </ul>
           <p class="table__qna">
-            По всем вопросам обращаться в администрацию к К. Михельсону
+            По всем вопросам обращаться в&nbsp;администрацию к К. Михельсону
           </p>
         </div>
       </div>
 
       <div class="grid">
-
-        <h2 class="block__title grid__title">
-          Этапы преображения Васюков
-        </h2>
+        <h2 class="block__title grid__title">Этапы преображения Васюков</h2>
 
         <ul class="grid__slider">
           <li class="grid__slide grid__slide_number_one">
             <div class="grid__item">
-              <div class="grid__number">
-                1
-              </div>
+              <div class="grid__number">1</div>
               <p class="grid__text">
                 Строительство железнодорожной магистрали Москва-Васюки
               </p>
@@ -171,39 +171,31 @@
           </li>
           <li class="grid__slide grid__slide_number_two">
             <div class="grid__item">
-              <div class="grid__number">
-                2
-              </div>
+              <div class="grid__number">2</div>
               <p class="grid__text">
-                Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
+                Открытие&nbsp;фешенебельной гостиницы «Проходная пешка» и других
+                небоскрёбов
               </p>
             </div>
           </li>
           <li class="grid__slide grid__slide_number_three">
             <div class="grid__item">
-              <div class="grid__number">
-                3
-              </div>
+              <div class="grid__number">3</div>
               <p class="grid__text">
-                Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
+                Поднятие сельского хозяйства в радиусе на тысячу километров:
+                производство овощей, фруктов, икры, шоколадных конфет
               </p>
             </div>
           </li>
           <li class="grid__slide grid__slide_number_four">
             <div class="grid__item">
-              <div class="grid__number">
-                4
-              </div>
-              <p class="grid__text">
-                Строительство дворца для турнира
-              </p>
+              <div class="grid__number">4</div>
+              <p class="grid__text">Строительство дворца для турнира</p>
             </div>
           </li>
           <li class="grid__slide grid__slide_number_five">
             <div class="grid__item">
-              <div class="grid__number">
-                5
-              </div>
+              <div class="grid__number">5</div>
               <p class="grid__text">
                 Размещение гаражей для гостевого автотранспорта
               </p>
@@ -211,28 +203,27 @@
           </li>
           <li class="grid__slide grid__slide_number_six">
             <div class="grid__item">
-              <div class="grid__number">
-                6
-              </div>
+              <div class="grid__number">6</div>
               <p class="grid__text">
-                Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+                Постройка сверхмощной радиостанции для передачи всему миру
+                сенсационных результатов
               </p>
             </div>
           </li>
           <li class="grid__slide grid__slide_number_seven">
             <div class="grid__item">
-              <div class="grid__number">
-                7
-              </div>
+              <div class="grid__number">7</div>
               <p class="grid__text">
-                Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+                Создание аэропорта «Большие Васюки» с регулярным отправлением
+                почтовых самолётов и дирижаблей во все концы света, включая
+                Лос-Анжелос и Мельбурн
               </p>
             </div>
           </li>
         </ul>
         <div class="grid__controls">
           <button class="block__slider-button" id="buttonPrevGrid">
-            <img src="./images/prev.svg" alt="Назад">   
+            <img src="images/prev.svg" alt="Назад" />
           </button>
           <div class="grid__pagination">
             <span class="grid__pagination-dot"></span>
@@ -242,43 +233,39 @@
             <span class="grid__pagination-dot"></span>
           </div>
           <button class="block__slider-button" id="buttonNextGrid">
-            <img src="./images/next.svg" alt="Вперёд">          
+            <img src="images/next.svg" alt="Вперёд" />
           </button>
         </div>
 
-        <img src="./images/plane.png" alt="Самолётик" class="grid__image">
-
+        <img
+          src="images/plane.png"
+          alt="Самолётик"
+          class="flying grid__image"
+        />
       </div>
 
       <div class="cards">
-        <h2 class="block__title">
-          Участники турнира
-        </h2>
+        <h2 class="block__title">Участники турнира</h2>
 
         <div class="cards__wrapper">
           <div class="cards__list">
-
             <ul class="cards__slider">
               <li class="cards__item">
-                <img src="./images/person.png" alt="Фотография участника турнира" class="cards__photo">
-                <p class="cards__name">
-                </p>
-                <p class="cards__about">
-                  Чемпион мира по шахматам
-                </p>
-                <a href="#" class="cards__link">
-                  Подробнее
-                </a>
+                <img
+                  src="images/person.png"
+                  alt="Фотография участника турнира"
+                  class="cards__photo"
+                />
+                <p class="cards__name"></p>
+                <p class="cards__about">Чемпион мира по шахматам</p>
+                <a href="#" class="cards__link"> Подробнее </a>
               </li>
             </ul>
-    
-            
-
           </div>
-          
+
           <div class="cards__controls">
             <button class="block__slider-button" id="buttonPrevCards">
-              <img src="./images/prev.svg" alt="Назад"> 
+              <img src="images/prev.svg" alt="Назад" />
             </button>
             <div class="cards__page">
               <span class="cards__page-number" id="currentCardNumber">3</span>
@@ -286,22 +273,21 @@
               <p id="allCardsLength">6</p>
             </div>
             <button class="block__slider-button" id="buttonNextCards">
-              <img src="./images/next.svg" alt="Вперёд"> 
+              <img src="images/next.svg" alt="Вперёд" />
             </button>
           </div>
-
         </div>
-        
       </div>
-   
     </main>
 
     <footer class="footer">
       <p class="footer__text">
-        Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+        Все персонажи, события и цитаты являются вымышленными и не принадлежат
+        создателям сайта. С подробностями можно познакомиться в главе XXXIV
+        романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
       </p>
     </footer>
 
-    <script src="./pages/index.js"></script>
+    <script src="pages/index.js"></script>
   </body>
 </html>

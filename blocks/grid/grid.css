@@ -1,11 +1,11 @@
 .grid {
-    margin: 0 72px 200px;
-    position: relative;
+  margin: 0 72px 200px;
+  position: relative;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .grid {
-      padding: 0 20px;
-      margin: 0 0 120px;
+    padding: 0 20px;
+    margin: 0 0 120px;
   }
 }

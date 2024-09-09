@@ -1,0 +1,57 @@
+:root {
+  --base-black: rgba(31, 31, 31, 1);
+  --base-dark: rgba(49, 49, 49, 1);
+  --base-grey: rgba(49, 49, 49, 0.6);
+  --base-blue: rgba(48, 87, 162, 1);
+  --base-light: rgba(233, 222, 212, 1);
+  --base-lightgrey: rgba(217, 217, 217, 1);
+  --base-white: rgba(255, 255, 255, 1);
+  --accent: rgba(245, 73, 50, 1);
+  --hover: rgba(251, 206, 81, 1);
+  --disabled: rgba(49, 49, 49, 0.2);
+  --border: rgba(208, 208, 208, 1);
+
+  --font-heading: "Merriweather", serif;
+  --font-base: "Golos Text", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select,
+figure,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  outline: none;
+  text-wrap: wrap;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

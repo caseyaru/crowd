@@ -1,3 +1,4 @@
 .preview__text_special {
-    color: rgba(245, 73, 50, 1);
+  color: var(--accent);
+  letter-spacing: 0.01em;
 }

@@ -1,4 +1,17 @@
 .cards {
-    max-width: 1202px;
-    margin: 0 auto;
+  max-width: 1222px;
+  margin: 0 auto 133px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cards {
+    max-width: 100%;
+    margin: 0 auto 175px;
+  }
 }

@@ -1,11 +1,18 @@
 .header__chess_big {
-    right: 334px;
-    bottom: 0;
+  right: 334px;
+  bottom: 0;
 }
 
-@media screen and (max-width:768px) {
-    .header__chess_big {
-        width: 130px;
-        right: 30%;
-    }
+@media screen and (min-width: 1440px) {
+  .header__chess_big {
+    right: 32%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__chess_big {
+    width: 100px;
+    right: 35%;
+    bottom: 0;
+  }
 }

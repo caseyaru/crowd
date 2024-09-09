@@ -1,10 +1,10 @@
 .footer {
-    background-color: rgba(233, 222, 212, 1);
-    padding: 40px 0 72px;
+  background-color: var(--base-light);
+  padding: 40px 0 72px;
 }
 
-@media screen and (max-width:1024px) {
-    .footer {
-        padding: 40px 20px 60px;
-    }
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 40px 20px 60px;
+  }
 }

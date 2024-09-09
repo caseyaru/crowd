@@ -1,9 +1,9 @@
 .header__texture {
-    position: absolute;
-    inset: 0 0 0 0;
-    z-index: 3;
-    mix-blend-mode: color-burn;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: 3;
+  mix-blend-mode: color-burn;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

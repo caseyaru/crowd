@@ -1,13 +1,13 @@
 .header__text-block {
-    position: relative;
-    z-index: 5;
-    margin-left: 72px;
-    max-width: 542px;
+  position: relative;
+  z-index: 5;
+  margin-left: 72px;
+  max-width: 542px;
 }
 
-@media screen and (max-width:768px) {
-    .header__text-block {
-        margin: 0;
-        padding: 0 20px;
-    }
+@media screen and (max-width: 768px) {
+  .header__text-block {
+    margin: 0;
+    padding: 0 20px;
+  }
 }

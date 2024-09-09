@@ -1,16 +1,17 @@
 .table__parameter-text {
-  font-family: "Golos Text", serif;
+  font-family: var(--font-base);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  width: 50%;
+  width: 56%;
   padding: 16px 0;
-  padding-left: 16px;
-  border-bottom: 2px solid rgba(208, 208, 208, 1);
+  padding-left: 13px;
+  border-bottom: 2px solid var(--border);
 }
 
 .table__parameter-text_special {
   position: relative;
+  margin-right: 5px;
 }
 
 .table__parameter-text_special::after {
@@ -20,7 +21,7 @@
   left: 0;
   content: "";
   width: 81px;
-  background-color: rgba(245, 73, 50, 1);
+  background-color: var(--accent);
   height: 2px;
 }
 
@@ -28,14 +29,14 @@
   .table__parameter-text {
     width: 100%;
     border: none;
-    padding: 12px 0 16px;
+    padding: 10px 0 16px;
   }
 }
 
-@media (max-width: 360px) {
-    .table__parameter-text {
-        font-size: 16px;
-        line-height: 21.6px;
-        word-break: break-all;
-    }
+@media (max-width: 361px) {
+  .table__parameter-text {
+    font-size: 16px;
+    line-height: 21.6px;
+    word-break: break-all;
+  }
 }

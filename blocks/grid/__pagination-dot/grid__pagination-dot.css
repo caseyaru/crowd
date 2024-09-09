@@ -1,7 +1,7 @@
 .grid__pagination-dot {
   width: 10px;
   height: 10px;
-  background-color: rgba(217, 217, 217, 1);
+  background-color: var(--base-lightgrey);
   border-radius: 50%;
   cursor: pointer;
 }

@@ -1,9 +1,15 @@
 .cards__name {
-    font-family: 'Golos Text', serif;
-font-size: 24px;
-font-weight: 600;
-line-height: 28.8px;
-color: rgba(49, 49, 49, 1);
-margin: 28px auto 6px;
-padding: 0;
+  font-family: var(--font-base);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  color: var(--base-dark);
+  margin: 28px auto 6px;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .cards__name {
+    margin: 28px 0 8px;
+  }
 }
