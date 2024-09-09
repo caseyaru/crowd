@@ -1,10 +1,16 @@
 .header__chess_little {
-    right: 41px;
-    bottom: 20px;
+  right: 45px;
+  bottom: 20px;
 }
 
-@media screen and (max-width:768px) {
-    .header__chess_little {
-        display: none;
-    }
+@media screen and (min-width: 1440px) {
+  .header__chess_little {
+    right: 16.5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__chess_little {
+    display: none;
+  }
 }

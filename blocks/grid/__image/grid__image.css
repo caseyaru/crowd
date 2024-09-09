@@ -14,8 +14,9 @@
 
 @media screen and (max-width: 460px) {
   .grid__image {
-    left: 20px;
-    width: 90%;
-    top: 205px;
+    left: 25px;
+    width: 93%;
+    top: 185px;
+    transform: rotate(-3deg);
   }
 }

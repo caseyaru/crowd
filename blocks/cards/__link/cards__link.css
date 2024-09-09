@@ -1,10 +1,10 @@
 .cards__link {
-  font-family: "Golos Text", serif;
+  font-family: var(--font-base);
   font-size: 16px;
   font-weight: 500;
   line-height: 19.2px;
-  color: rgba(48, 87, 162, 1);
-  border: 1px solid rgba(48, 87, 162, 1);
+  color: var(--base-blue);
+  border: 1px solid var(--base-blue);
   border-radius: 62px;
   padding: 12px;
   margin: 20px auto 0;
@@ -12,6 +12,12 @@
 }
 
 .cards__link:hover {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(48, 87, 162, 1);
+  color: var(--base-white);
+  background-color: var(--base-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .cards__link {
+    padding: 8px 10px;
+  }
 }

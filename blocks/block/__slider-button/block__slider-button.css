@@ -1,8 +1,8 @@
 .block__slider-button {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: rgba(49, 49, 49, 1);
+  background-color: var(--base-dark);
   outline: none;
   border: none;
   cursor: pointer;
@@ -13,5 +13,12 @@
 }
 
 .block__slider-button:hover {
-  background-color: rgba(251, 206, 81, 1);
+  background-color: var(--hover);
+}
+
+@media screen and (max-width: 768px) {
+  .block__slider-button {
+    width: 36px;
+    height: 36px;
+  }
 }

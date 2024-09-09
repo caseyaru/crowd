@@ -1,5 +1,6 @@
 // переменные
 
+const SMALL = 460;
 const MOBILE = 768;
 const LAPTOP = 1024;
 const DESKTOP = 1200;
@@ -69,6 +70,17 @@ let currentIndex = 0;
 let slidesToShow = 3;
 let slideWidth = sliderCards.offsetWidth / slidesToShow;
 let autoSlideInterval;
+
+// картинка в хедере
+
+const updateImage = () => {
+  const imageElement = document.querySelector('.header__city img');
+  if (window.innerWidth < SMALL) {
+      imageElement.src = './images/headerCityMobile.png';
+  } else {
+      imageElement.src = './images/headerCity.png';
+  }
+}
 
 // бегущая строка
 
@@ -291,6 +303,7 @@ buttonNextCards.addEventListener('click', () => {
   startAutoSlide();
 });
 
+updateImage();
 changeTexts();
 createCards(persons);
 setCardsToShow();
@@ -303,6 +316,7 @@ if (window.innerWidth <= LAPTOP) {
 }
 
 window.addEventListener("resize", () => {
+  updateImage();
   changeTexts();
   checkSliderGrid();
   updateButtons();

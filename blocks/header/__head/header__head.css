@@ -1,11 +1,14 @@
 .header__head {
-    display: flex;
-    flex-direction: row;
-    padding: 26px 72px 62px;
+  display: flex;
+  flex-direction: row;
+  padding: 26px 72px 62px;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
-@media screen and (max-width:768px) {
-    .header__head {
-        padding: 18px 20px 40px;
-    }
+@media screen and (max-width: 768px) {
+  .header__head {
+    padding: 18px 20px 40px;
+    margin: 0;
+  }
 }

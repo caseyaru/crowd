@@ -1,12 +1,12 @@
 .line__item {
   transition: all 0.1s ease-in-out;
   counter-increment: item;
-  font-family: "Merriweather", serif;
+  font-family: var(--font-heading);
   font-size: 22px;
   font-weight: 400;
   line-height: 24.2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 1);
+  color: var(--base-white);
   display: flex;
   align-items: center;
 }
@@ -17,7 +17,7 @@
   width: 6px;
   height: 6px;
   border-radius: 1em;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--base-white);
   margin-left: 12px;
 }
 

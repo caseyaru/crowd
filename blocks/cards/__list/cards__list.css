@@ -1,4 +1,5 @@
 .cards__list {
-    position: relative;
-    margin: 60px auto 140px;
+  position: relative;
+  margin: 60px auto 0;
+  overflow: hidden;
 }

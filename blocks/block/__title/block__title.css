@@ -1,22 +1,23 @@
 .block__title {
-    font-family: 'Merriweather', serif;
-    font-size: 54px;
-    font-weight: 400;
-    line-height: 64.8px;
-    text-transform: uppercase;
-    max-width: 806px;
+  font-family: var(--font-heading);
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 64.8px;
+  text-transform: uppercase;
+  max-width: 806px;
+  margin: 0 0 50px;
 }
 
-@media screen and (max-width:768px) {
-    .block__title {
-        font-size: 36px;
-        line-height: 39.6px;
-    }
+@media screen and (max-width: 768px) {
+  .block__title {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
 }
 
-@media screen and (max-width:360px) {
-    .block__title {
-        font-size: 24px;
-        line-height: 26px;
-    }
+@media screen and (max-width: 360px) {
+  .block__title {
+    font-size: 24px;
+    line-height: 26px;
+  }
 }

@@ -1,0 +1,15 @@
+@keyframes flying {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.flying {
+  animation: 10s linear infinite flying;
+}

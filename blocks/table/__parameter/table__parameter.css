@@ -1,11 +1,28 @@
 .table__parameter {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 1200px) {
-    .table__parameter {
-      flex-direction: column;
-      border-bottom: 2px solid rgba(208, 208, 208, 1);
-    }
+  .table__parameter {
+    flex-direction: column;
+    border-bottom: 2px solid var(--border);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table__parameter:nth-child(4n) .table__parameter-text {
+    display: none;
+  }
+  .table__parameter:nth-child(4n) .table__parameter-title {
+    padding: 12px 0 16px;
+  }
+  .table__parameter:nth-child(4n) .table__parameter-title::after {
+    content: "50 коп.";
+    font-size: 20px;
+    line-height: 21.6px;
+    font-family: var(--font-base);
+    font-weight: 600;
+    padding-left: 6px;
+  }
 }
